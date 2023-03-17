@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh 10vh 75vh 5vh;
+    grid-template-areas: "header" "buttonsContainer" "main" "footer";
+    background-color: rgb(177, 174, 174);
+}
+
+
+h1 {
+    grid-area: header;
+    width: 100%;
+    font-size: 3.5rem;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 0.4%;
+    background-color: #615c5c;
+    color: white;
+}
+
+#plano {
+    grid-area: main;
+    background-image: linear-gradient(0deg, rgba(240, 240, 236, 0.386) 0%, rgba(233, 238, 232, 0.621) 80%);
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+
+}
+
+.celda {
+    width: 5px;
+    height: 5px;
+}
+
+.celda_viva {
+    background-color: rgb(24, 22, 24);
+
+}
+
+.celda_muerta {
+    background-color: rgb(245, 245, 248);
+    opacity: 50%;
+}
+
+
+.containerButtons {
+    grid-area: buttonsContainer;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    background-color: lightcoral;
+    padding-left: 15px;
+    ;
+}
+
+.canvasButtons,
+.speedButtons {
+    width: auto;
+    display: none;
+    align-content: flex-start;
+}
+
+
+button {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    font-size: 80%;
+    border: none;
+}
+
+
+.containerButtons__button {
+    background-color: brown;
+    color: aliceblue;
+    box-shadow: inset 3px 0 10px 1px rgb(231, 222, 222);
+}
+
+.speedButtons__button,
+.canvasButtons__button {
+    background-color: rgb(180, 230, 213);
+    color: rgb(13, 20, 26);
+    box-shadow: inset 3px 0 10px 1px rgb(144, 190, 228);
+
+}
+
+.button--clicked {
+    background-color: azure;
+}
+
+footer {
+    grid-area: footer;
+    width: 100%;
+    background-color: #bababa;
+    padding-top: 0.2%;
+    color: white;
+    text-align: end;
+    padding-right: 2%;
+}
+
